@@ -1,0 +1,33 @@
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <section class="glass">
+            <div class="box">
+                    <h1><%= type %></h1>
+                    <h2><%= curmonth %></h2>
+                <br>
+                <form action="/" method="post">
+                    <input type="text" placeholder="Write something" name="new" id="new" required>
+                    <button type="submit">+</button>
+                </form>
+                <% for(var i=0;i<newListItem.length;i++){ %>
+                    <div class="item">
+                        <input type="checkbox" name="check" id="check">
+                        <p><%= newListItem[i] %></p>
+                    </div>
+                <% }%>
+            </div>         
+        </section>
+    </main>
+</body>
+</html>
